@@ -158,3 +158,12 @@ F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtm
 F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
 F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Product\Delete.cshtml.g.cs
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs

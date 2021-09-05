@@ -10,11 +10,11 @@ namespace demo_web_2.Models
     {
         [Key]
         public int Id { get; set; }
-        [StringLength(30, MinimumLength = 6, ErrorMessage = "Maximum 30 characters and minimum 6 characters")]
         [Required]
+        [StringLength(50, MinimumLength = 6)]
         public string UserName { get; set; }
-        [StringLength(30, MinimumLength = 6, ErrorMessage = "Maximum 30 characters and minimum 6 characters")]
         [Required]
+        [StringLength(100, MinimumLength = 6)]
         public string Password { get; set; }
     }
 }

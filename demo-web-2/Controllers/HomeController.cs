@@ -15,9 +15,6 @@ namespace demo_web_2.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private ISession _session => _httpContextAccessor.HttpContext.Session;
         private readonly ApplicationDbContext _db;
 
         public HomeController(ApplicationDbContext db)
@@ -25,14 +22,9 @@ namespace demo_web_2.Controllers
             _db = db;
         }
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
-            if (_session.GetString("idUser") != null)
+            if (HttpContext.Session.GetString("idUser") != null)
             {
                 return View();
             }
@@ -92,7 +84,7 @@ namespace demo_web_2.Controllers
                 if (data.Count() > 0)
                 {
                     //add session
-                    _session.SetString("UserName", data.FirstOrDefault().UserName);
+                    HttpContext.Session.SetString("UserName", data.FirstOrDefault().UserName);
                     return RedirectToAction("Index");
                 }
                 else
@@ -108,21 +100,13 @@ namespace demo_web_2.Controllers
         //Logout
         public ActionResult Logout()
         {
-            _session.Clear();
+            HttpContext.Session.Clear();
             return RedirectToAction("Login");
         }
 
         public IActionResult Privacy()
         {
             return View();
-        }
-
-
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         public static string GetMD5(string str)
