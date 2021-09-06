@@ -20,7 +20,7 @@ namespace demo_web_2.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Product");
         }
 
         public IActionResult Privacy()
