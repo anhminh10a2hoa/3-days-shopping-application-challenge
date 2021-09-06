@@ -165,5 +165,10 @@ F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.
 F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
 F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
 F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
-F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
-F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+F:\demo-web-2\demo-web-2\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+F:\demo-web-2\demo-web-2\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs

@@ -1,4 +1,5 @@
 ﻿using demo_web_2.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,14 +8,22 @@ using System.Threading.Tasks;
 
 namespace demo_web_2.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        private readonly DbContextOptions _options;
+
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
+            _options = options;
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
         }
 
         public DbSet<Product> Product { get; set; }
-        public DbSet<User> User { get; set; }
+
     }
 }

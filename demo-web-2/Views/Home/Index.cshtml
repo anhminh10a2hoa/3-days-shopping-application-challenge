@@ -1,22 +1,8 @@
-﻿@using Microsoft.AspNetCore.Http;
-
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewData["Title"] = "Home Page";
 }
-<div class="row justify-content-md-start">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-header">
-                Wellcome
-            </div>
-            <div class="card-body">
-                @if (@Context.Session.GetString("UserName") != null)
-                {
-                <p>Hi,  @Context.Session.GetString("UserName").ToString()</p>
-                    <a href="@Url.Action("Logout","Home")" class="btn btn-warning">Logout</a>
-                }
-            </div>
-        </div>
 
-    </div>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

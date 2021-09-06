@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace demo_web_2.Models
 {
-    public class User
+    public class Login
     {
-        [Key]
-        public int Id { get; set; }
         [Required]
-        [StringLength(50, MinimumLength = 6)]
-        public string UserName { get; set; }
+        [EmailAddress]
+        public string Email { get; set; }
         [Required]
-        [StringLength(100, MinimumLength = 6)]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [Display(Name = "Remember Me")]
+        public bool RememberMe { get; set; }
     }
 }
