@@ -1,9 +1,11 @@
 ﻿using demo_web_2.Data;
 using demo_web_2.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -41,13 +43,25 @@ namespace demo_web_2.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Product product)
+        public async Task<IActionResult> Create(Product product, List<IFormFile> image  ) 
         {
             IdentityUser user = await _userManager.GetUserAsync(HttpContext.User);
             if (user != null)
             {
                 if (ModelState.IsValid)
                 {
+                    foreach (var item in image)
+                    {
+                        if (item.Length > 0)
+                        {
+                            using (var stream = new MemoryStream())
+                            {
+                                await item.CopyToAsync(stream);
+                                product.Image = stream.ToArray();
+
+                            }
+                        }
+                    }
                     _db.Product.Add(product);
                     _db.SaveChanges();
                     return RedirectToAction("Index");

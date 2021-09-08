@@ -20,5 +20,7 @@ namespace demo_web_2.Models
         [Required]
         [Range(0, int.MaxValue, ErrorMessage = "Price must be greater or equal to 0")]
         public int Amount { get; set; }
+        [Required] 
+        public byte[] Image { get; set; }
     }
 }
